@@ -20,17 +20,17 @@ This build pipeline is required to download and host your cost data.
     - Name the pipeline something like 'Cost Insights'
     - Add the 'Download Cost Data' task for each subscription, then end with the 'Publish Cost Data' task 
     - Your pipeline will look like this:
-    ![](marketplace/screenshots/buildpipeline.png)
+    ![](screenshots/buildpipeline.png)
 
 2. **Queue the build** and wait for it to finish before continuing with step 3
     - While waiting, check the tips below
 
 3. **Add the Widget to your Dashboard**<br/>
     Each team can have their own widget, one or more per dashboard.
-    ![](marketplace/screenshots/add-widget.gif)
+    ![](screenshots/add-widget.gif)
   
     Configure the widget to use the Build Pipeline created in step 1.
-    ![](marketplace/screenshots/configure-widget.gif)
+    ![](screenshots/configure-widget.gif)
     Then configure it like you like.
 
 ## Tips
@@ -41,7 +41,7 @@ This build pipeline is required to download and host your cost data.
 
 ## Examples
 
-[![](marketplace/screenshots/screen2_thumb.png)](marketplace/screenshots/screen2.png)
+[![](screenshots/screen2_thumb.png)](screenshots/screen2.png)
 
 ## One widget for free!
 
