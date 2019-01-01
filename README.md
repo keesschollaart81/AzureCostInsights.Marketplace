@@ -36,7 +36,7 @@ This build pipeline is required to download and host your cost data.
 ## Tips
 
 - In the trigger's tab, disable the 'continuous' trigger and set a scheduled trigger, for example every night at 04:00 AM.
-- When the costs of the added subscriptions are 'high': extend the maximum duration of your build in the 'options' tab (±30 minutes per 100.000 $)
+- When the costs of the added subscriptions are 'high': extend the maximum duration of your build in the 'options' tab (±10 minutes per 100.000 $)
 - Observe the artifacts of the build, this is the data that will be used by the widget
 
 ## Examples
@@ -50,7 +50,7 @@ This build pipeline is required to download and host your cost data.
 ## Things I have to do before Prod
 
 - Detailed getting started
-- Move the Marketplace stuff out of the code repo
+V Move the Marketplace stuff out of the code repo
 - Parallelize the download
 - Link 'Why'
 - Public Dashboard
@@ -60,4 +60,6 @@ This build pipeline is required to download and host your cost data.
 - Setup prod env.
 - Test TFS
 - Test different browsers
-- Test different build hosts
+V Test different build hosts
+V Refactor License backend
+- Remove this list
