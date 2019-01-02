@@ -12,6 +12,8 @@ Get in control over your Azure Costs! This Widget gives you insights in your tea
 - 1 widget for free, additional widget-instances starting at 1$ per widget per month (in-app purchase)
 
 ## Getting started
+
+![](/AzureCostInsights.Marketplace/images/flow.png)
  
 1. **Create the build pipeline**<br/>
 This build pipeline is required to download and host your cost data.
@@ -19,33 +21,42 @@ This build pipeline is required to download and host your cost data.
     - Create a new empty build (not release) pipeline and select a (preferable empty) repository
     - Name the pipeline something like 'Cost Insights'
     - Add the 'Download Cost Data' task for each subscription, then end with the 'Publish Cost Data' task 
+    - Depending on your Subscription Type (Pay as you Go, EA, CSP, etc.) you need to select the 'consumption' or the 'usage' API in the 'Download Cost Data' task. [More info here](https://github.com/keesschollaart81/AzureCostInsights.Marketplace/wiki/Getting-Started#subscription-types).
     - Your pipeline will look like this:
-    ![](screenshots/buildpipeline.png)
+    ![](/AzureCostInsights.Marketplace/screenshots/buildpipeline.png)
 
 2. **Queue the build** and wait for it to finish before continuing with step 3
-    - While waiting, check the tips below
+    - While waiting, I really encourage you to check the tips below
 
 3. **Add the Widget to your Dashboard**<br/>
-    Each team can have their own widget, one or more per dashboard.
-    ![](screenshots/add-widget.gif)
+    - Go to your teams' dashboard and add the 'Azure Cost Insights' widget.
+    ![](/AzureCostInsights.Marketplace/screenshots/addwidget.gif)
   
-    Configure the widget to use the Build Pipeline created in step 1.
-    ![](screenshots/configure-widget.gif)
-    Then configure it like you like.
-
 ## Tips
 
-- In the trigger's tab, disable the 'continuous' trigger and set a scheduled trigger, for example every night at 04:00 AM.
+- In the trigger's tab, disable the 'continuous' trigger and set a scheduled trigger, for example every night at 04:00 AM
 - When the costs of the added subscriptions are 'high': extend the maximum duration of your build in the 'options' tab (±10 minutes per 100.000 $)
 - Observe the artifacts of the build, this is the data that will be used by the widget
+- Create only 1 cost pipeline, teams (within a project) can share it. Add multiple 'download cost data' task for each subscription
 
 ## Examples
 
-[![](screenshots/screen2_thumb.png)](screenshots/screen2.png)
+[![](/AzureCostInsights.Marketplace/screenshots/screen2_thumb.png)](/AzureCostInsights.Marketplace/screenshots/screen2.png)
 
 ## One widget for free!
 
-// todo: warn about paid
+Although this widget is marked as free in this marketplace, be aware that only the first instance of this widget (within your tenant) is free. The price starts at 1.00 € per widget per month. 
+
+You can buy additional 'slots' by going to: 'Project Settings' (bottom left corner in Azure DevOps) > 'Extensions' > 'Azure Cost Insights'.
+
+## Questions, bugs, feature requests, etc.
+
+Please raise an issue in this GitHub Repository:
+https://github.com/keesschollaart81/AzureCostInsights.Marketplace/issues
+
+If you want to drop me an email, use [this form](https://www.emailmeform.com/builder/form/6cNG0B3bIfEp232ftoKR2zO7).
+
+I'm usually online in the [https://teamservices.club/](https://teamservices.club/) Slack Channel.
 
 ## Things I have to do before Prod
 
