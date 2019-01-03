@@ -13,6 +13,8 @@ Get in control over your Azure Costs! This Widget gives you insights in your tea
 
 ## Getting started
 
+You need to create an Azure Pipeline for the widget to work. This pipeline is going to download and host your cost-data, used by the widget.
+
 ![](/AzureCostInsights.Marketplace/images/flow.png)
  
 1. **Create the build pipeline**<br/>
@@ -26,10 +28,9 @@ This build pipeline is required to download and host your cost data.
     ![](/AzureCostInsights.Marketplace/screenshots/buildpipeline.png)
 
 2. **Queue the build** and wait for it to finish before continuing with step 3
-    - While waiting, I really encourage you to read the following tips:
+    - While waiting, You are encouraged you to read the following tips:
     - In the trigger's tab, disable the 'continuous' trigger and set a scheduled trigger, for example every night at 04:00 AM
-    // todo betere zin
-    - The build pipeline has by default a maximum duration of 60 minutes ('options' tab), this might be to short depending on the size of your cost data. It takes ~10 minutes to download the costs for 100.000$
+    - The build pipeline has, by default, a maximum duration of 60 minutes (see the 'options' tab), this might be to short depending on the size of your cost data. It takes ~10 minutes to download the costs for 100.000$
     - Observe the artifacts of the build, this is the data that will be used by the widget
     - Create only 1 cost pipeline, teams (within a project) can share it. Add multiple 'download cost data' task for each subscription
 
@@ -37,8 +38,6 @@ This build pipeline is required to download and host your cost data.
     - Go to your teams' dashboard and add the 'Azure Cost Insights' widget.
     ![](/AzureCostInsights.Marketplace/screenshots/addwidget.gif)
   
- 
-
 ## Examples
 
 [![](/AzureCostInsights.Marketplace/screenshots/screen2_thumb.png)](/AzureCostInsights.Marketplace/screenshots/screen2.png)
@@ -58,12 +57,19 @@ If you want to drop me an email at [info@azurecostinsights.com](mailto:info@azur
 
 I'm usually online in the [https://teamservices.club/](https://teamservices.club/) Slack Channel.
 
+Tip: If you have problems with the Download/Publish task, set the 'system.debug' to true to get full debugging output / raw-artifacts.
+
+## Supported configurations
+
+- All Azure Subscription Types (EA, CSP, Pay as you Go, MSDN, Microsoft Internal, etc...)
+- Azure DevOps (TFS/Azure DevOps Server not yet, contact me if you want to help me test that)
+- Tested with latest versions of Chrome, Edge, Internet Explorer 11, Firefox and Safari
+- All type of hosted Agents
+
 ## Things I have to do before Prod
  
 - Public Dashboard
 - Video
-- Examples
 - Setup prod env.
-- Test TFS
 - Test different browsers 
 - By Month
