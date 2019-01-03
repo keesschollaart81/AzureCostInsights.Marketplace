@@ -68,5 +68,4 @@ I'm usually online in the [https://teamservices.club/](https://teamservices.club
 - Test TFS
 - Test different browsers 
 - SubscriptionId grouping / case insensitive
-- open config knop weghaklen
 - By Month
