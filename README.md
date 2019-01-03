@@ -26,18 +26,18 @@ This build pipeline is required to download and host your cost data.
     ![](/AzureCostInsights.Marketplace/screenshots/buildpipeline.png)
 
 2. **Queue the build** and wait for it to finish before continuing with step 3
-    - While waiting, I really encourage you to check the tips below
+    - While waiting, I really encourage you to read the following tips:
+    - In the trigger's tab, disable the 'continuous' trigger and set a scheduled trigger, for example every night at 04:00 AM
+    // todo betere zin
+    - The build pipeline has by default a maximum duration of 60 minutes ('options' tab), this might be to short depending on the size of your cost data. It takes ~10 minutes to download the costs for 100.000$
+    - Observe the artifacts of the build, this is the data that will be used by the widget
+    - Create only 1 cost pipeline, teams (within a project) can share it. Add multiple 'download cost data' task for each subscription
 
 3. **Add the Widget to your Dashboard**<br/>
     - Go to your teams' dashboard and add the 'Azure Cost Insights' widget.
     ![](/AzureCostInsights.Marketplace/screenshots/addwidget.gif)
   
-## Tips
-
-- In the trigger's tab, disable the 'continuous' trigger and set a scheduled trigger, for example every night at 04:00 AM
-- When the costs of the added subscriptions are 'high': extend the maximum duration of your build in the 'options' tab (±10 minutes per 100.000 $)
-- Observe the artifacts of the build, this is the data that will be used by the widget
-- Create only 1 cost pipeline, teams (within a project) can share it. Add multiple 'download cost data' task for each subscription
+ 
 
 ## Examples
 
@@ -54,7 +54,7 @@ You can buy additional 'slots' by going to: 'Project Settings' (bottom left corn
 Please raise an issue in this GitHub Repository:
 https://github.com/keesschollaart81/AzureCostInsights.Marketplace/issues
 
-If you want to drop me an email, use [this form](https://www.emailmeform.com/builder/form/6cNG0B3bIfEp232ftoKR2zO7).
+If you want to drop me an email at [info@azurecostinsights.com](mailto:info@azurecostinsights.com).
 
 I'm usually online in the [https://teamservices.club/](https://teamservices.club/) Slack Channel.
 
@@ -67,3 +67,6 @@ I'm usually online in the [https://teamservices.club/](https://teamservices.club
 - Setup prod env.
 - Test TFS
 - Test different browsers 
+- SubscriptionId grouping / case insensitive
+- open config knop weghaklen
+- By Month
