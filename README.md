@@ -5,7 +5,7 @@ Get in control over your Azure Costs! This Widget gives you insights in your tea
 ## Key Features
 
 - Visualize cost data by Resouce Group, Resouce Type, Subscription or Tag
-- Fully customizable: char & line chart-types, stacked & non-stacked, any timespan
+- Fully customizable: bar & line chart-types, stacked & non-stacked, any timespan
 - Filter by subscription and then/or by the name of Resource Group, Resource Type or by the value of the selected Tag (using glob patterns)
 - No external service, data stay's within your Azure DevOps tenant
 - Leverages your Azure Service Connections for downloading your data
