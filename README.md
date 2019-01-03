@@ -63,9 +63,7 @@ I'm usually online in the [https://teamservices.club/](https://teamservices.club
 - Public Dashboard
 - Video
 - Examples
-- Explain the pricing
 - Setup prod env.
 - Test TFS
 - Test different browsers 
-- SubscriptionId grouping / case insensitive
 - By Month
