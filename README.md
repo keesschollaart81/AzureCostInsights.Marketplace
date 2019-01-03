@@ -59,18 +59,11 @@ If you want to drop me an email, use [this form](https://www.emailmeform.com/bui
 I'm usually online in the [https://teamservices.club/](https://teamservices.club/) Slack Channel.
 
 ## Things I have to do before Prod
-
-- Detailed getting started
-V Move the Marketplace stuff out of the code repo
-- Parallelize the download
-- Link 'Why'
+ 
 - Public Dashboard
 - Video
 - Examples
 - Explain the pricing
 - Setup prod env.
 - Test TFS
-- Test different browsers
-V Test different build hosts
-V Refactor License backend
-- Remove this list
+- Test different browsers 
