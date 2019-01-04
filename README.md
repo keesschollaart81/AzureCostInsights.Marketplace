@@ -13,7 +13,7 @@ Get in control over your Azure Costs! This Widget gives you insights in your tea
 
 ## Getting started
 
-You need to create an Azure Pipeline for the widget to work. This pipeline is going to download and host your cost-data, used by the widget.
+You need to create an Azure Pipeline for the widget to work. This pipeline is going to download and host your cost-data, used by the widget. [Read the 4 good reasons for 'why the need of a pipeline' here](https://github.com/keesschollaart81/AzureCostInsights.Marketplace/wiki/Why-the-need-of-a-Pipeline).
 
 ![](/AzureCostInsights.Marketplace/images/flow.png)
  
@@ -23,7 +23,7 @@ This build pipeline is required to download and host your cost data.
     - Create a new empty build (not release) pipeline and select a (preferable empty) repository
     - Name the pipeline something like 'Cost Insights'
     - Add the 'Download Cost Data' task for each subscription, then end with the 'Publish Cost Data' task 
-    - Depending on your Subscription Type (Pay as you Go, EA, CSP, etc.) you need to select the 'consumption' or the 'usage' API in the 'Download Cost Data' task. [More info here](https://github.com/keesschollaart81/AzureCostInsights.Marketplace/wiki/Getting-Started#subscription-types).
+    - Depending on your Subscription Type (Pay as you Go, EA, CSP, etc.) you need to select the 'consumption' or the 'usage' API in the 'Download Cost Data' task. [More info here](https://github.com/keesschollaart81/AzureCostInsights.Marketplace/wiki/Usage-vs-Consumption-Api).
     - Your pipeline will look like this:
     ![](/AzureCostInsights.Marketplace/screenshots/buildpipeline.png)
 
