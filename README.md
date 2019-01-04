@@ -44,7 +44,7 @@ While waiting, You are encouraged you to read the following tips:
 
 ## One widget for free!
 
-Although this widget is marked as free in this marketplace, be aware that only the first instance of this widget (within your tenant) is free. The price starts at 1.00 € per widget per month. 
+Although this widget is marked as free in this marketplace, be aware that only the first instance of this widget (within your tenant) is free. The price starts at 1.00 € per widget per month for smaller organizations. If you need more than 15 widgets (enterprise plan), please send an email to [info@azurecostinsights.com](mailto:info@azurecostinsights.com).
 
 You can buy additional 'slots' by navigating to: 'Project Settings' (bottom left corner in Azure DevOps) > 'Extensions' > 'Azure Cost Insights'.
 
@@ -63,5 +63,18 @@ Tip: If you have problems with the Download/Publish task, set the 'system.debug'
 
 - All Azure Subscription types (EA, CSP, Pay as you Go, MSDN, Microsoft Internal, etc...)
 - Azure DevOps (TFS/Azure DevOps Server: not yet, contact me if you want to help me test that)
-- Tested with latest versions of Chrome, Edge, Internet Explorer 11, Firefox and Safari
+- Tested with latest versions of Chrome, Edge, Firefox and Safari, Internet Explorer 11 seems to work but is not tested thoroughly. 
 - All type of hosted Agents
+
+## Privacy, Telemetry & Credit Card data
+
+This extension will never send any of your cost data to any remote endpoint. So things like Azure Data (Subscription/Resource-Group/Tags), Cost data or identities/tokens never leave your Azure DevOps tenant! 
+
+Some telemetry data is collected to make this a better product. The 'Download Cost Data' and 'Publish Cost Data' tasks send a request to Application Insights containing the duration of the task and the version of the task. 
+Both the Widget and the Widget-Configuration-panel will send a 'PageView' request to Application Insights containing the configuration of that widget (grouped by, period, etc.). 
+The Widget and the Configuration-panel use https://license.prd.azurecostinsights.com to validate the license, this request only contains your tenant ID (a guid) and the ID of that widget (a random number).
+
+Only when you create a subscription:
+
+When creating a subscription the data entered in the form (email, company name, quantity, currency) is send to the api mentioned above. The Credit Card details and payments are processed by Stripe.com (a widely used service, [more info here](https://stripe.com/docs/security/stripe)). So no credit card info is send to this api. 
+
