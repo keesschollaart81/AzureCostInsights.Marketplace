@@ -1,6 +1,6 @@
 # Azure Cost Insights
 
-Get in control over your Azure Costs! This Widget gives you insights in your teams' infrastructure spendings. Add the widget to your dashboard and detect anomolies much quicker. 
+Get in control over your Azure Costs! This Widget gives you insights in your teams' infrastructure spendings. Add the widget to your dashboard and detect anomolies much quicker. The first widget is for free, forever!
 
 ## Key Features
 
@@ -27,7 +27,7 @@ This build pipeline is required to download and host your cost data.
     - Your pipeline will look like this:
     ![](/AzureCostInsights.Marketplace/screenshots/buildpipeline.png)
 
-2. **Queue the build** and wait for it to finish before continuing with step 3 
+2. **Queue the build** and wait for it to finish before continuing with step 3 <br/>
 While waiting, You are encouraged you to read the following tips:
     - In the trigger's tab, disable the 'continuous' trigger and set a scheduled trigger, for example every night at 04:00 AM and make sure 'Only schedule builds if the source or pipeline has changed' is **un**checked
     - The build pipeline has, by default, a maximum duration of 60 minutes (see the 'options' tab), this might be to short depending on the size of your cost data. It takes ~10 minutes to download the costs for 100.000$
@@ -61,7 +61,7 @@ Tip: If you have problems with the Download/Publish task, set the 'system.debug'
 
 ## Supported configurations
 
-- All Azure Subscription types (EA, CSP, Pay as you Go, MSDN, Microsoft Internal, etc...)
+- All Azure Subscription types (tested so far: EA, Pay as you Go, MSDN, Microsoft Internal), not tested yet but expected to work: CSP, Free trial, [retired offers](https://azure.microsoft.com/en-us/support/legal/offer-details/) 
 - Azure DevOps (TFS/Azure DevOps Server: not yet, contact me if you want to help me test that)
 - Tested with latest versions of Chrome, Edge, Firefox and Safari, Internet Explorer 11 seems to work but is not tested thoroughly. 
 - All type of hosted Agents
