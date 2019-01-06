@@ -70,6 +70,8 @@ Tip: If you have problems with the Download/Publish task, set the 'system.debug'
 
 This extension will never send any of your cost data to any remote endpoint. So things like Azure Data (Subscription/Resource-Group/Tags), Cost data or identities/tokens never leave your Azure DevOps tenant! 
 
+**Only the during preview period:** your Azure DevOps username (email) is included in the telemetry data. If unexpected errors show up in the logs, you might be contacted on why/how that happened. Preview ends ±feb 2019.
+
 Some requests are made to https://license.prd.azurecostinsights.com to validate your license.
 
 Some telemetry data is collected to make this a better product, checkout the details on [the Wiki](https://github.com/keesschollaart81/AzureCostInsights.Marketplace/wiki/Privacy,-Telemetry-&-Credit-Card-data).
