@@ -7,9 +7,9 @@ Get in control over your Azure Costs! This Widget gives you insights in your tea
 - Visualize cost data by Resouce Group, Resouce Type, Subscription or Tag
 - Fully customizable: bar & line chart-types, stacked & non-stacked, any timespan
 - Filter by subscription and then/or by the name of Resource Group, Resource Type or by the value of the selected Tag (using glob patterns)
-- No external service, data stay's within your Azure DevOps tenant
+- All your cost data stay's within your Azure DevOps tenant, no external service dependency 
 - Leverages your Azure Service Connections for downloading your data
-- All Subscription are supported (like EA, PayG, MSDN, etc.) except CSP
+- All Azure Subscription (offer) types are supported (like EA, PayG, MSDN, etc.) except CSP
 - 1 widget for free, additional widget-instances starting at 1$ per widget per month (in-app purchase)
 
 ## Getting started
@@ -29,7 +29,7 @@ If you prefer to have your pipeline as (YAML) code, [this is supported and docum
     ![](/AzureCostInsights.Marketplace/screenshots/buildpipeline.png)
 
 2. **Queue the build** and wait for it to finish before continuing with step 3 <br/>
-While waiting, You are encouraged you to read the following tips:
+While waiting, you are encouraged you to read the following tips:
     - In the trigger's tab, disable the 'continuous' trigger and set a scheduled trigger, for example every night at 04:00 AM and make sure 'Only schedule builds if the source or pipeline has changed' is **un**checked
     - The build pipeline has, by default, a maximum duration of 60 minutes (see the 'options' tab), this might be to short depending on the size of your cost data. It takes ~10 minutes to download the costs for 100.000$
     - Observe the artifacts of the build, this is the data that will be used by the widget
@@ -74,7 +74,9 @@ Supported:
 
 ## Privacy, Telemetry & Credit Card data
 
-This extension will never send any of your cost data to any remote endpoint. So things like Azure Data (Subscription/Resource-Group/Tags), Cost data or identities/tokens never leave your Azure DevOps tenant! 
+This extension will never send any of your cost data to any remote endpoint.
+
+Sensitive Azure Data (like names of Subscription/Resource-Group/Tags), your Cost data or identities/tokens never leave your Azure DevOps tenant! 
 
 **Only the during preview period:** your Azure DevOps username (email) is included in the telemetry data. If unexpected errors show up in the logs, you might be contacted on why/how that happened. Preview ends ±feb 2019.
 
