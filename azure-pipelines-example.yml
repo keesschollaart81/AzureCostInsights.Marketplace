@@ -1,0 +1,30 @@
+queue:
+  name: Hosted Ubuntu 1604
+
+trigger: none
+pr: none
+
+jobs:
+- job: "Azure Cost Insights"
+  timeoutInMinutes: 120  
+
+  steps:
+  
+  - task: keesschollaart.AzureCostInsights-Dev.AzureCostInsightsWidget.DownloadTask.DownloadCostData@1
+    displayName: 'Download cost data - Kees Prive'
+    inputs:
+      ConnectedServiceNameARM: 'Kees Prive'
+      apiToUse: usage
+      currency: EUR
+      locale: 'nl-nl'
+      regioInfo: NL 
+
+  - task: keesschollaart.AzureCostInsights-Dev.AzureCostInsightsWidget.DownloadTask.DownloadCostData@1
+    displayName: 'Download Cost Data'
+    inputs:
+      ConnectedServiceNameARM: 'Visual Studio Premium met MSDN (063b2abf-3703-4687-9d4e-826010b85e24)'
+  
+  - task: keesschollaart.AzureCostInsights-Dev.AzureCostInsightsWidget.PublishTask.PublishCostData@1
+    displayName: 'Publish Cost Data'
+    continueOnError: true
+
