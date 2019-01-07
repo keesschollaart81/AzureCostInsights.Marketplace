@@ -11,7 +11,7 @@ jobs:
   - task: keesschollaart.AzureCostInsights-Dev.AzureCostInsightsWidget.DownloadTask.DownloadCostData@1
     displayName: 'Download cost data - Kees Prive'
     inputs:
-      ConnectedServiceNameARM: '86af7676-6a6f-4ae1-9fea-538d6b69d1ca' #guid of Service Connection, open a connection and find out the resourceId guid in the url here: https://caseonline.visualstudio.com/CaseOnline.AzureDevOps.CostInsights/_settings/adminservices
+      ConnectedServiceNameARM: '86af7676-6a6f-4ae1-9fea-538d6b69d1ca' # guid of Service Connection, open a connection and find out the resourceId guid in the url here: https://caseonline.visualstudio.com/CaseOnline.AzureDevOps.CostInsights/_settings/adminservices
       apiToUse: usage
       currency: EUR
       locale: 'nl-nl'
