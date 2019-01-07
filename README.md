@@ -18,7 +18,7 @@ You need to create an Azure Pipeline for the widget to work. This pipeline is go
 ![](/AzureCostInsights.Marketplace/images/flow.png)
  
 1. **Create the build pipeline**<br/>
-This build pipeline is required to download and host your cost data.
+If you prefer to have your pipeline as (YAML) code, [this is supported and documented over here](https://github.com/keesschollaart81/AzureCostInsights.Marketplace/wiki/YAML-Pipeline).
 
     - Create a new empty build (not release) pipeline and select a (preferable empty) repository
     - Name the pipeline something like 'Cost Insights'
