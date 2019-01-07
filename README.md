@@ -9,6 +9,7 @@ Get in control over your Azure Costs! This Widget gives you insights in your tea
 - Filter by subscription and then/or by the name of Resource Group, Resource Type or by the value of the selected Tag (using glob patterns)
 - No external service, data stay's within your Azure DevOps tenant
 - Leverages your Azure Service Connections for downloading your data
+- All Subscription are supported (like EA, PayG, MSDN, etc.) except CSP
 - 1 widget for free, additional widget-instances starting at 1$ per widget per month (in-app purchase)
 
 ## Getting started
@@ -59,9 +60,14 @@ I'm usually online in the [https://teamservices.club/](https://teamservices.club
 
 Tip: If you have problems with the Download/Publish task, set the 'system.debug' to true to get full debugging output / raw-artifacts.
 
-## Supported configurations
+## What is supported
 
-- All Azure Subscription types (tested so far: EA, Pay as you Go, MSDN, Microsoft Internal), not tested yet but expected to work: CSP, Free trial, [retired offers](https://azure.microsoft.com/en-us/support/legal/offer-details/) 
+Not supported:
+- CSP Subscriptions
+
+Supported:
+
+- All Azure Subscription types (tested so far: EA, Pay as you Go, MSDN, Microsoft Internal), not tested yet but expected to work [all the other offer types except CSP](https://azure.microsoft.com/en-us/support/legal/offer-details/) 
 - Azure DevOps (TFS/Azure DevOps Server: not yet, contact me if you want to help me test that)
 - Tested with latest versions of Chrome, Edge, Firefox and Safari, Internet Explorer 11 seems to work but is not tested thoroughly. 
 - All type of hosted Agents
