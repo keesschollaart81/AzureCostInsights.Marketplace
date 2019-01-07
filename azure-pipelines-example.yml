@@ -1,12 +1,10 @@
-queue:
-  name: Hosted Ubuntu 1604
-
 trigger: none
 pr: none
 
 jobs:
 - job: "Azure Cost Insights"
   timeoutInMinutes: 120  
+  pool: "Hosted Ubuntu 1604"
 
   steps:
   
