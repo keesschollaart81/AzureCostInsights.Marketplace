@@ -2,7 +2,7 @@ trigger: none
 pr: none
 
 jobs:
-- job: "Azure Cost Insights"
+- job: "Azure_Cost_Insights"
   timeoutInMinutes: 120  
   pool: "Hosted Ubuntu 1604"
 
