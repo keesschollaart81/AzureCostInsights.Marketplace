@@ -1,14 +1,25 @@
 # Azure Cost Insights
 
-Get in control over your Azure Costs! This Widget gives you insights in your teams' infrastructure spendings. Add the widget to your dashboard and detect anomolies much quicker. The first widget is for free, forever!
+It's easy to get your Azure Costs out of control. _Wouldn't it be great to get insights of your infrastructure spending in your daily routine?_
+
+Costs are a concern of everyone, developers, product owners and operations.
+They come together in Azure DevOps, so why not show these insights there?
+
+Azure Cost Insights is a widget that you can put on your Azure DevOps Dashboard.
+
+This widget is built with the belief that cost insights need to be scoped to your spendings. 
+
+[![Azure Cost Insights YouTube video](/AzureCostInsights.Marketplace/images/play_thumb.png)](https://www.youtube.com/watch?v=tyIzQWP5dMw)
 
 ## Key Features
 
-- Visualize cost data by Resouce Group, Resouce Type, Subscription or Tag
+- Learn about the costs per product, per environment, per regio, etc....
+- Pivot by Resouce Group, Resouce Type, Subscription or Tag
+- Detect sudden spikes in a day, instead of at the end of the month
 - Fully customizable: bar & line chart-types, stacked & non-stacked, any timespan
 - Filter by subscription and then/or by the name of Resource Group, Resource Type or by the value of the selected Tag (using glob patterns)
 - All your cost data stay's within your Azure DevOps tenant, no external service dependency 
-- Leverages your Azure Service Connections for downloading your data
+- Leverages your existing Azure Service Connections integration for downloading your data
 - All Azure Subscription (offer) types are supported (like EA, PayG, MSDN, etc.) except CSP
 - 1 widget for free, additional widget-instances starting at 1$ per widget per month (in-app purchase)
 
