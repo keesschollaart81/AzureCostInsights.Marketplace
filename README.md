@@ -41,7 +41,7 @@ If you prefer to have your pipeline as (YAML) code, [this is supported and docum
 
 2. **Queue the build** and wait for it to finish before continuing with step 3 <br/>
 While waiting, you are encouraged you to read the following tips:
-    - In the trigger's tab, disable the 'continuous' trigger and set a scheduled trigger, for example every night at 04:00 AM and make sure 'Only schedule builds if the source or pipeline has changed' is **un**checked
+    - In the trigger's tab, disable the 'continuous' trigger and set a scheduled trigger, every night at 04:00 AM (these API's are unavailable ±00:00-03:00 UTC) and make sure 'Only schedule builds if the source or pipeline has changed' is **un**checked
     - The build pipeline has, by default, a maximum duration of 60 minutes (see the 'options' tab), this might be to short depending on the size of your cost data. It takes ~10 minutes to download the costs for 100.000$
     - Observe the artifacts of the build, this is the data that will be used by the widget
     - Create only 1 cost pipeline, teams (within a project) can share it. Add multiple 'download cost data' task for each subscription
