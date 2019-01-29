@@ -89,6 +89,8 @@ This extension will never send any of your cost data to any remote endpoint.
 
 Sensitive Azure Data (like names of Subscription/Resource-Group/Tags), your Cost data or identities/tokens never leave your Azure DevOps tenant! 
 
+Of you want a fully self contained/isolated install with 0 external dependencies/requests, that is possible, please contact me (only paid customers).
+
 **Only the during preview period:** your Azure DevOps username (email) is included in the telemetry data. If unexpected errors show up in the logs, you might be contacted on why/how that happened. Preview ends ±feb 2019.
 
 Some requests are made to https://license.prd.azurecostinsights.com to validate your license.
