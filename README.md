@@ -26,39 +26,28 @@ This widget is built with the belief that cost insights need to be scoped to you
 ## Getting started
 
 You need to create an Azure Pipeline for the widget to work. This pipeline is going to download and host your cost-data, used by the widget. [Read the 4 good reasons for 'why the need of a pipeline' here](https://github.com/keesschollaart81/AzureCostInsights.Marketplace/wiki/Why-the-need-of-a-Pipeline).
-
-![](/AzureCostInsights.Marketplace/images/flow.png)
  
-1. **Create the build pipeline**<br/>
-If you prefer to have your pipeline as (YAML) code, [this is supported and documented over here](https://github.com/keesschollaart81/AzureCostInsights.Marketplace/wiki/YAML-Pipeline).
+1. Create the build pipeline
+2. Queue the build and wait for it to succeed
+3. Add the Widget to your Dashboard
 
-    - Create a new empty build (not release) pipeline and select a (preferable empty) repository
-    - Name the pipeline something like 'Cost Insights'
-    - Add the 'Download Cost Data' task for each subscription, then end with the 'Publish Cost Data' task 
-    - Depending on your Subscription Type (Pay as you Go, EA, CSP, etc.) you need to select the 'consumption' or the 'usage' API in the 'Download Cost Data' task. [More info here](https://github.com/keesschollaart81/AzureCostInsights.Marketplace/wiki/Usage-vs-Consumption-Api).
-    - Your pipeline will look like this:
-    ![](/AzureCostInsights.Marketplace/screenshots/buildpipeline.png)
-
-2. **Queue the build** and wait for it to finish before continuing with step 3 <br/>
-While waiting, you are encouraged you to read the following tips:
-    - In the trigger's tab, disable the 'continuous' trigger and set a scheduled trigger, every night at 04:00 AM (these API's are unavailable ±00:00-03:00 UTC) and make sure 'Only schedule builds if the source or pipeline has changed' is **un**checked
-    - The build pipeline has, by default, a maximum duration of 60 minutes (see the 'options' tab), this might be to short depending on the size of your cost data. It takes ~10 minutes to download the costs for 100.000$
-    - Observe the artifacts of the build, this is the data that will be used by the widget
-    - Create only 1 cost pipeline, teams (within a project) can share it. Add multiple 'download cost data' task for each subscription
-
-3. **Add the Widget to your Dashboard**<br/>
-    - Go to your teams' dashboard and add the 'Azure Cost Insights' widget.
-    ![](/AzureCostInsights.Marketplace/screenshots/addwidget.gif)
+Altough it's not rocket science, please take a look in the **['Getting Started'](https://github.com/keesschollaart81/AzureCostInsights.Marketplace/wiki/Getting-started)** because it has some useful tips! 
   
 ## Examples
 
 [![](/AzureCostInsights.Marketplace/screenshots/screen2_thumb.png)](/AzureCostInsights.Marketplace/screenshots/screen2.png)
 
-## One widget for free!
+## Pricing
 
-Although this widget is marked as free in this marketplace, be aware that only the first instance of this widget (within your tenant) is free. The price starts at 1.00 € per widget per month for smaller organizations. If you need more than 15 widgets (enterprise plan), please send an email to [info@azurecostinsights.com](mailto:info@azurecostinsights.com).
+![](/AzureCostInsights.Marketplace/images/plans.png)
 
-You can buy additional 'slots' by navigating to: 'Project Settings' (bottom left corner in Azure DevOps) > 'Extensions' > 'Azure Cost Insights'.
+* Widgets: the total number of widgets active in the Azure DevOps organisation
+* Subscriptions: the data of how many Azure Subscriptions can be combined in a single widget
+* Filtering: filter the available dataset for widgets / users. This is usefull when Azure Subscriptions are cross team/org and not everyone is suppose to see everything
+* On-Prem/Server: get access the a special (non-public) version of this extension that can be installed on TFS / Azure DevOps Server
+* Offline: get access the a special (non-public) version of this extension that does not track telemetry and does not require the license server
+ 
+You can upgrade your 'free' plan by navigating to: 'Project Settings' (bottom left corner in Azure DevOps) > 'Extensions' > 'Azure Cost Insights'.
 
 ## Questions, bugs, feature requests, etc.
 
