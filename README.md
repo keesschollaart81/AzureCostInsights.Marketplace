@@ -53,6 +53,9 @@ Checkout the full release history at [GitHub Releases](https://github.com/keessc
 
 - Support for MSI identities
 - Support for Dark Theme
+- Updated tooltip behaviour for big datasets
+- Shift+click on Legend inverses filter behaviour
+- 1 month trial mode for basic/pro/enterprise plans
 - Filter/download dataset during download (pro/enterprise plans)
 - Support for Azure DevOps Server / TFS (pro/enterprise plans)
 - Offline mode (enterprise plan)
