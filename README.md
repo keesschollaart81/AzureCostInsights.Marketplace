@@ -12,10 +12,11 @@ Azure Cost Insights is a widget that you can put on your Azure DevOps Dashboard.
 
 ## Key Features
 
+- **Save money!** Detect yesterday's cost-spike today, instead of at the end of the month
+- **Fully customizable**. Bar & line chart-types, pivot by Resouce Group, Resouce Type, Subscription, Tag, Product, Environment, Regio, etc...
+
 ![](/AzureCostInsights.Marketplace/screenshots/pivots.png)
 
-- **Save money!** Detect yesterday's cost-spike tpday, instead of at the end of the month
-- **Fully customizable**. Bar & line chart-types, pivot by Resouce Group, Resouce Type, Subscription, Tag, Product, Environment, Regio, etc...
 - **Secure**, your data never leaves Azure DevOps, no external service, data can be scoped/filtered leveraging the build-in service-connections of Azure Pipelines
 - **Advanced**, works with... combined subscriptions, all Subscription types (except CSP), dark-theme, tag on Resource Groups, big enterprise customers
 
@@ -23,11 +24,13 @@ Azure Cost Insights is a widget that you can put on your Azure DevOps Dashboard.
 
 ## Getting started
 
-You need to create an Azure Pipeline for the widget to work. This pipeline is going to download and host your cost-data, used by the widget. You might figure it out but **save some time** and read the **[Getting Started](https://github.com/keesschollaart81/AzureCostInsights.Marketplace/wiki/Getting-started)** because it has some **useful tips**! 
+You might figure it out but **save some time** and read the **[Getting Started](https://github.com/keesschollaart81/AzureCostInsights.Marketplace/wiki/Getting-started)** because it has some **useful tips**!  For example: you need to create an Azure Pipeline for the widget to work which is going to download and host your cost-data, used by the widget. 
 
-If you wonder why this widget needs an Azure Pipeline, [read the 4 good reasons for 'why the need of a pipeline' here](https://github.com/keesschollaart81/AzureCostInsights.Marketplace/wiki/Why-the-need-of-a-Pipeline). 
+If you wonder why this widget needs an Azure Pipeline, [read the 4 good reasons for 'why the need of a pipeline' here](https://github.com/keesschollaart81/AzureCostInsights.Marketplace/wiki/Why-the-need-of-a-Pipeline).
 
 ## Pricing
+
+Everyone can use this widget, the first widget is free! If you're exicted about the product you can try out the basic, pro and enterprise plan one month for free.
 
 ![](/AzureCostInsights.Marketplace/images/plans.png)
 
