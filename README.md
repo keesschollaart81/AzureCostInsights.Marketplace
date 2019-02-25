@@ -41,7 +41,7 @@ Some explanations:
 * On-Prem/Server: get access the a special (non-public) version of this extension that can be installed on TFS / Azure DevOps Server
 * Offline: get access the a special (non-public) version of this extension that does not track telemetry and does not require the license server
  
-You can upgrade your 'free' plan by navigating to: 'Project Settings' (bottom left corner in Azure DevOps) > 'Extensions' > 'Azure Cost Insights'.
+You can upgrade your 'free' plan by navigating to: 'Organization Settings' (bottom left corner in Azure DevOps) > 'Extensions' > 'Azure Cost Insights'.
 
 ## Release notes / Roadmap
 
